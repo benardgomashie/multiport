@@ -13,7 +13,7 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <div className="relative w-40 h-40 rounded-full overflow-hidden ring-4 ring-gray-200 shadow-xl">
               <Image
-                src="/profile.jpg"
+                src="/profilepic.jpg"
                 alt="Benard Gomashie"
                 fill
                 className="object-cover"
