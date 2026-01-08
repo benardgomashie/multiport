@@ -4,9 +4,9 @@ export const researcherData: PersonaData = {
   title: "Exploring Secure Distributed Systems",
   subtitle: "MSc Researcher in Blockchain & Edge Computing Security",
   about: [
-    "My research focuses on the intersection of edge computing and blockchain technology—specifically, how decentralized systems can enhance security in resource-constrained environments. Through my Master's thesis, I designed and implemented an Ethereum-based security framework for edge computing, addressing critical challenges in data integrity, access control, and decentralized trust.",
-    "What excites me about this work is its real-world potential. Edge computing is everywhere—in IoT devices, smart cities, healthcare systems—and securing these distributed systems is crucial. By leveraging blockchain's immutability and smart contracts' programmability, we can build more resilient, trustworthy systems.",
-    "Beyond my thesis, I'm deeply interested in decentralized identity, IoT security, and the broader applications of blockchain in solving societal challenges. My interdisciplinary background—combining agricultural extension with information technology—gives me a unique perspective on how technology can serve communities and create meaningful impact.",
+    "My research focuses on the intersection of edge computing and blockchain technology: specifically, how decentralized systems can enhance security in resource-constrained environments. Through my Master's thesis, I designed and implemented an Ethereum-based security framework for edge computing, addressing critical challenges in data integrity, access control, and decentralized trust.",
+    "What excites me about this work is its real-world potential. Edge computing is everywhere - in IoT devices, smart cities, healthcare systems - and securing these distributed systems is crucial. By leveraging blockchain's immutability and smart contracts' programmability, we can build more resilient, trustworthy systems.",
+    "Beyond my thesis, I'm deeply interested in decentralized identity, IoT security, and the broader applications of blockchain in solving societal challenges. My interdisciplinary background (combining agricultural extension with information technology) gives me a unique perspective on how technology can serve communities and create meaningful impact.",
   ],
   skills: [
     "Ethereum Smart Contracts (Solidity)",
