@@ -128,3 +128,4 @@ Components are modular. Edit page files in `app/` to add or remove sections.
 ## License
 
 © 2026 Benard Yao Gomashie. All rights reserved.
+  
