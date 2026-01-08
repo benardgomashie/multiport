@@ -144,7 +144,7 @@ export default function FounderPage() {
             <div key={index} className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="p-12 flex flex-col justify-center">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">{project.title}</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">{project.name}</h3>
                   <p className="text-lg text-gray-700 leading-relaxed mb-8">{project.description}</p>
                   
                   <div className="space-y-4 mb-8">

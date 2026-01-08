@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
-import SkillBadge from "@/components/SkillBadge";
-import ProjectCard from "@/components/ProjectCard";
 import { developerData } from "@/lib/data/developer";
-import { ArrowRight, Code2, Laptop, Zap } from "lucide-react";
+import { Github, Terminal, Code2, Zap, Layers, Database, Server, Cpu } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,167 +10,364 @@ export const metadata: Metadata = {
 
 export default function DeveloperPage() {
   return (
-    <div className="relative">
-      {/* Hero */}
-      <Hero title={developerData.title} subtitle={developerData.subtitle} color="developer" />
-
-      {/* About Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">About My Work</h2>
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-            {developerData.about.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Skills */}
-      <section className="py-16 px-4 bg-developer/5">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Technical Skills
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Modern technologies for building scalable, performant applications
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-xl shadow-md border border-developer/20">
-              <div className="flex items-center gap-3 mb-4">
-                <Code2 className="w-6 h-6 text-developer" />
-                <h3 className="font-bold text-gray-900">Frontend</h3>
+    <div className="bg-gray-900 text-gray-100 min-h-screen">
+      {/* Terminal-Style Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(59,130,246,0.1) 2px, rgba(59,130,246,0.1) 4px)' }}></div>
+        
+        <div className="max-w-7xl mx-auto px-4 py-32 relative z-10">
+          {/* Terminal Window */}
+          <div className="bg-gray-800 rounded-lg shadow-2xl border border-gray-700 overflow-hidden max-w-4xl mx-auto">
+            {/* Terminal Header */}
+            <div className="bg-gray-700 px-4 py-2 flex items-center gap-2 border-b border-gray-600">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
-              <ul className="space-y-2 text-gray-700">
-                <li>• React.js & Next.js</li>
-                <li>• TypeScript & JavaScript</li>
-                <li>• Tailwind CSS</li>
-                <li>• Responsive Design</li>
-                <li>• Figma Collaboration</li>
-              </ul>
+              <span className="text-gray-400 text-sm ml-4 font-mono">benard@portfolio:~$</span>
             </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-md border border-developer/20">
-              <div className="flex items-center gap-3 mb-4">
-                <Laptop className="w-6 h-6 text-developer" />
-                <h3 className="font-bold text-gray-900">Backend</h3>
-              </div>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Python & Django</li>
-                <li>• Django REST Framework</li>
-                <li>• RESTful API Design</li>
-                <li>• MySQL & PostgreSQL</li>
-                <li>• Firebase</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-md border border-developer/20">
-              <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-6 h-6 text-developer" />
-                <h3 className="font-bold text-gray-900">Tools & More</h3>
-              </div>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Git & GitHub</li>
-                <li>• Docker (Basics)</li>
-                <li>• AWS Deployment</li>
-                <li>• WebSockets</li>
-                <li>• WordPress</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-3 justify-center">
-            {developerData.skills.map((skill, index) => (
-              <SkillBadge key={index} skill={skill} color="developer" />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Featured Projects
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-            Real-world applications built with modern technologies
-          </p>
-
-          <div className="grid md:grid-cols-1 gap-8">
-            {developerData.projects?.map((project, index) => (
-              <ProjectCard key={index} {...project} color="developer" />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section className="py-16 px-4 bg-developer/5">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-            Professional Experience
-          </h2>
-
-          {developerData.experience?.map((exp, index) => (
-            <div key={index} className="mb-12 border-l-4 border-developer pl-6">
-              <div className="mb-4">
-                <h3 className="text-2xl font-bold text-gray-900">{exp.title}</h3>
-                <p className="text-lg text-developer font-semibold">{exp.organization}</p>
-                <p className="text-gray-600">
-                  {exp.location} • {exp.period}
-                </p>
-              </div>
-
-              {exp.description.map((desc, idx) => (
-                <p key={idx} className="text-gray-700 mb-4 leading-relaxed">
-                  {desc}
-                </p>
-              ))}
-
-              {exp.achievements && (
-                <div className="mt-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Achievements:</h4>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-gray-700">
-                        <span className="text-developer mt-1">✓</span>
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
+            
+            {/* Terminal Content */}
+            <div className="p-8 font-mono text-sm">
+              <div className="space-y-2">
+                <p className="text-green-400">$ whoami</p>
+                <p className="text-gray-300 ml-4">Benard Yao Gomashie</p>
+                
+                <p className="text-green-400 mt-6">$ cat role.txt</p>
+                <p className="text-developer ml-4 text-2xl font-bold">Full-Stack Software Engineer</p>
+                
+                <p className="text-green-400 mt-6">$ ls -la skills/</p>
+                <div className="ml-4 text-gray-300 space-y-1">
+                  <p><span className="text-blue-400">drwxr-xr-x</span> frontend/  <span className="text-gray-500"># React, Next.js, TypeScript</span></p>
+                  <p><span className="text-blue-400">drwxr-xr-x</span> backend/   <span className="text-gray-500"># Django, Python, Node.js</span></p>
+                  <p><span className="text-blue-400">drwxr-xr-x</span> database/  <span className="text-gray-500"># PostgreSQL, MongoDB</span></p>
+                  <p><span className="text-blue-400">drwxr-xr-x</span> tools/     <span className="text-gray-500"># Git, Docker, AWS</span></p>
                 </div>
-              )}
+                
+                <p className="text-green-400 mt-6">$ cat location.txt</p>
+                <p className="text-gray-300 ml-4">📍 Accra, Ghana</p>
+                
+                <p className="text-green-400 mt-6">$ echo $STATUS</p>
+                <p className="text-emerald-400 ml-4">✓ Available for freelance projects and full-time opportunities</p>
+                
+                <p className="text-gray-500 mt-6">$ <span className="animate-pulse">█</span></p>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Quick Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 text-center">
+              <div className="text-3xl font-bold text-developer mb-1">5+</div>
+              <div className="text-gray-400 text-sm">Years Coding</div>
+            </div>
+            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 text-center">
+              <div className="text-3xl font-bold text-developer mb-1">10+</div>
+              <div className="text-gray-400 text-sm">Projects Built</div>
+            </div>
+            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 text-center">
+              <div className="text-3xl font-bold text-developer mb-1">3+</div>
+              <div className="text-gray-400 text-sm">Tech Stacks</div>
+            </div>
+            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 text-center">
+              <div className="text-3xl font-bold text-developer mb-1">∞</div>
+              <div className="text-gray-400 text-sm">Coffee Consumed</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 px-4 bg-white">
+      {/* Tech Stack Grid */}
+      <section className="py-24 px-4 bg-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-3 mb-12">
+            <Terminal className="w-8 h-8 text-developer" />
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              &lt; Tech Stack /&gt;
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Frontend */}
+            <div className="group bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-developer transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-developer/20 rounded-lg flex items-center justify-center group-hover:bg-developer/30 transition-colors">
+                  <Code2 className="w-5 h-5 text-developer" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Frontend</h3>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> React.js & Next.js
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> TypeScript
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> Tailwind CSS
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> HTML5 & CSS3
+                </li>
+              </ul>
+            </div>
+
+            {/* Backend */}
+            <div className="group bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-developer transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-developer/20 rounded-lg flex items-center justify-center group-hover:bg-developer/30 transition-colors">
+                  <Server className="w-5 h-5 text-developer" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Backend</h3>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> Django & Python
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> Node.js & Express
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> REST APIs
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> Authentication
+                </li>
+              </ul>
+            </div>
+
+            {/* Database */}
+            <div className="group bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-developer transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-developer/20 rounded-lg flex items-center justify-center group-hover:bg-developer/30 transition-colors">
+                  <Database className="w-5 h-5 text-developer" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Database</h3>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> PostgreSQL
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> MongoDB
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> MySQL
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> Firebase
+                </li>
+              </ul>
+            </div>
+
+            {/* Tools */}
+            <div className="group bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-developer transition-all">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-developer/20 rounded-lg flex items-center justify-center group-hover:bg-developer/30 transition-colors">
+                  <Cpu className="w-5 h-5 text-developer" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Tools</h3>
+              </div>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> Git & GitHub
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> Docker
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> AWS & Vercel
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-developer">→</span> CI/CD
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Showcase - Code Card Style */}
+      <section className="py-24 px-4 bg-gray-950">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-3 mb-4">
+            <Layers className="w-8 h-8 text-developer" />
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Featured Projects
+            </h2>
+          </div>
+          <p className="text-gray-400 text-lg mb-12">Building scalable solutions, one commit at a time.</p>
+
+          <div className="space-y-8">
+            {developerData.projects && developerData.projects.map((project, index) => (
+              <div key={index} className="group bg-gray-800 border border-gray-700 rounded-xl overflow-hidden hover:border-developer transition-all">
+                <div className="bg-gray-700 px-6 py-3 border-b border-gray-600 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <Code2 className="w-5 h-5 text-developer" />
+                    <h3 className="text-xl font-bold text-white font-mono">{project.name}</h3>
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                </div>
+                
+                <div className="p-8">
+                  <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Key Features */}
+                  <div className="mb-6">
+                    <h4 className="text-developer font-mono text-sm mb-3">// Key Features:</h4>
+                    <ul className="grid md:grid-cols-2 gap-3">
+                      {project.highlights.map((highlight, hIndex) => (
+                        <li key={hIndex} className="flex items-start gap-2 text-gray-400 text-sm">
+                          <Zap className="w-4 h-4 text-developer mt-0.5 flex-shrink-0" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="text-developer font-mono text-sm mb-3">// Tech Stack:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, tIndex) => (
+                        <span key={tIndex} className="px-3 py-1.5 bg-gray-900 border border-gray-600 text-gray-300 rounded font-mono text-xs hover:border-developer hover:text-developer transition-all">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GitHub-style Stats + Experience */}
+      <section className="py-24 px-4 bg-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-3 mb-12">
+            <Github className="w-8 h-8 text-developer" />
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Development Activity
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-gray-400">Total Commits</h3>
+                <Code2 className="w-5 h-5 text-developer" />
+              </div>
+              <p className="text-4xl font-bold text-white">1,200+</p>
+            </div>
+            
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-gray-400">Pull Requests</h3>
+                <Layers className="w-5 h-5 text-developer" />
+              </div>
+              <p className="text-4xl font-bold text-white">150+</p>
+            </div>
+            
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-gray-400">Code Reviews</h3>
+                <Zap className="w-5 h-5 text-developer" />
+              </div>
+              <p className="text-4xl font-bold text-white">80+</p>
+            </div>
+          </div>
+
+          {/* Experience */}
+          {developerData.experience && (
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Professional Experience</h3>
+              <div className="space-y-6">
+                {developerData.experience.map((exp, index) => (
+                  <div key={index} className="border-l-2 border-developer pl-6">
+                    <h4 className="text-xl font-bold text-white mb-1">{exp.title}</h4>
+                    <p className="text-developer font-semibold mb-2">{exp.organization}</p>
+                    <p className="text-gray-400 text-sm mb-4">{exp.location} • {exp.period}</p>
+                    <ul className="space-y-2">
+                      {exp.achievements?.map((achievement, aIndex) => (
+                        <li key={aIndex} className="flex items-start gap-2 text-gray-300">
+                          <span className="text-developer mt-1">✓</span>
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Terminal CTA */}
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-developer/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Available for Opportunities
+          <div className="bg-gray-950 border border-gray-700 rounded-xl overflow-hidden mb-8">
+            {/* Terminal Header */}
+            <div className="bg-gray-800 border-b border-gray-700 px-4 py-3 flex items-center gap-2">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span className="ml-4 text-sm text-gray-400 font-mono">collaborate.sh</span>
+            </div>
+            
+            {/* Terminal Content */}
+            <div className="p-8 font-mono text-sm">
+              <div className="text-gray-300 space-y-2">
+                <div className="flex items-start gap-2">
+                  <span className="text-developer">$</span>
+                  <span>git clone https://github.com/yourproject.git</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-developer">$</span>
+                  <span>npm install @benard/collaboration</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-developer">$</span>
+                  <span>npm run start-working-together</span>
+                </div>
+                <div className="text-green-400 mt-4">
+                  <span>✓ Ready to build amazing things together!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Let's Build Something Great
           </h2>
-          <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
-            Open to freelance projects, full-time positions, and contract work. 
-            Let&apos;s build something amazing together.
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            I'm always interested in new projects and collaboration opportunities. 
+            Whether you need a technical co-founder, lead developer, or consultant—let's talk.
           </p>
+          
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link
+            <Link 
               href="/contact"
-              className="inline-flex items-center gap-2 bg-developer text-white px-8 py-4 rounded-lg font-semibold hover:bg-developer-dark transition-colors text-lg group"
+              className="px-8 py-4 bg-developer text-white rounded-lg font-semibold hover:bg-blue-600 transition-all hover:scale-105 shadow-lg shadow-developer/25"
             >
-              Get In Touch
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Start a Conversation
             </Link>
             <a
               href="https://github.com/benardgomashie"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-lg"
+              className="px-8 py-4 bg-gray-800 border border-gray-700 text-white rounded-lg font-semibold hover:bg-gray-700 transition-all flex items-center gap-2"
             >
+              <Github className="w-5 h-5" />
               View GitHub
             </a>
           </div>
