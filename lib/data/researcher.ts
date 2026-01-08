@@ -1,0 +1,99 @@
+import { PersonaData } from "@/types";
+
+export const researcherData: PersonaData = {
+  title: "Exploring Secure Distributed Systems",
+  subtitle: "MSc Researcher in Blockchain & Edge Computing Security",
+  about: [
+    "My research focuses on the intersection of edge computing and blockchain technology—specifically, how decentralized systems can enhance security in resource-constrained environments. Through my Master's thesis, I designed and implemented an Ethereum-based security framework for edge computing, addressing critical challenges in data integrity, access control, and decentralized trust.",
+    "What excites me about this work is its real-world potential. Edge computing is everywhere—in IoT devices, smart cities, healthcare systems—and securing these distributed systems is crucial. By leveraging blockchain's immutability and smart contracts' programmability, we can build more resilient, trustworthy systems.",
+    "Beyond my thesis, I'm deeply interested in decentralized identity, IoT security, and the broader applications of blockchain in solving societal challenges. My interdisciplinary background—combining agricultural extension with information technology—gives me a unique perspective on how technology can serve communities and create meaningful impact.",
+  ],
+  skills: [
+    "Ethereum Smart Contracts (Solidity)",
+    "Web3.js & Blockchain Development",
+    "Edge Computing Architecture",
+    "IoT Security Concepts",
+    "IPFS (Decentralized Storage)",
+    "Ganache, Truffle, Remix IDE",
+    "MetaMask Integration",
+    "Cryptographic Hashing (SHA-256, Keccak-256)",
+    "Access Control Models (RBAC)",
+    "Research Methodology (Mixed-Method)",
+    "Academic Writing (APA)",
+    "System Performance Analysis",
+    "Distributed Systems Design",
+    "Python for Research",
+  ],
+  education: [
+    {
+      degree: "Master of Science (MSc) in Information Technology",
+      institution: "BlueCrest University College, Accra, Ghana",
+      period: "2023 – 2025",
+      focus: [
+        "Information Systems in Organizations",
+        "Data-Based Systems & Big Data",
+        "Object-Oriented Analysis and Design",
+        "Research Methodology",
+        "Data Networks",
+        "Advanced Mathematics",
+      ],
+      achievements: [
+        "Conducted extensive research on blockchain-based edge computing security",
+        "Designed and implemented Ethereum smart contract framework",
+        "Integrated IPFS for decentralized data management",
+        "Evaluated system performance metrics (latency, throughput, resource utilization)",
+      ],
+    },
+    {
+      degree: "Bachelor of Science (BSc) in Agricultural Extension",
+      institution: "University of Ghana, Legon",
+      period: "2017 – 2021",
+      focus: [
+        "Rural development and communication",
+        "Data collection and field research",
+        "Technology adoption in agriculture",
+        "Community engagement strategies",
+      ],
+      achievements: [
+        "Developed strong analytical and research skills",
+        "Gained interdisciplinary perspective on technology and society",
+        "Built foundation for Tech4Good initiatives",
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Secure Edge Computing Using Blockchain",
+      description: "Master's thesis project implementing an Ethereum-based security framework for edge computing environments.",
+      technologies: ["Solidity", "Ethereum", "Web3.js", "IPFS", "Ganache", "Truffle", "Python"],
+      highlights: [
+        "Designed smart contracts for device authentication",
+        "Implemented decentralized data logging system",
+        "Integrated IPFS for tamper-proof storage",
+        "Developed role-based access control (RBAC)",
+        "Created audit logging mechanisms",
+        "Conducted performance evaluation and analysis",
+        "Applied mixed-method research approach",
+      ],
+    },
+    {
+      name: "IoT Security Research",
+      description: "Investigation of security threats and vulnerabilities in Internet of Things (IoT) ecosystems.",
+      technologies: ["Research Analysis", "Security Frameworks", "Threat Modeling"],
+      highlights: [
+        "Identified key security challenges in IoT",
+        "Analyzed existing security models",
+        "Proposed blockchain-based solutions",
+        "Evaluated decentralized trust models",
+      ],
+    },
+  ],
+  highlights: [
+    "Completed Master's thesis on blockchain-based edge security",
+    "Published research on decentralized security models (unpublished thesis)",
+    "Strong foundation in both theoretical research and practical implementation",
+    "Interdisciplinary background combining agriculture and technology",
+    "Passionate about Tech for Social Good initiatives",
+    "Open to research collaborations and PhD opportunities",
+  ],
+};

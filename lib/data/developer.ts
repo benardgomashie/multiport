@@ -1,0 +1,97 @@
+import { PersonaData } from "@/types";
+
+export const developerData: PersonaData = {
+  title: "Full-Stack Developer & Digital Craftsman",
+  subtitle: "Building scalable web applications with React, Django & Next.js",
+  about: [
+    "I'm a full-stack developer who loves building things that work—and work well. Whether it's a complex healthcare platform, a location-based social app, or a client's business website, I approach every project with the same commitment to clean code, scalable architecture, and excellent user experience.",
+    "My technical journey spans frontend frameworks like React and Next.js, backend systems with Django and Python, and real-time features using WebSockets and Firebase. I've built authentication systems, RESTful APIs, GPS-based matching algorithms, and everything in between.",
+    "What drives me isn't just the technology—it's solving real problems. Every line of code I write serves a purpose, whether it's helping patients find healthcare, connecting people nearby, or giving a small business their digital presence.",
+  ],
+  skills: [
+    "React.js & Next.js",
+    "Python & Django",
+    "Django REST Framework",
+    "TypeScript & JavaScript",
+    "Firebase Authentication",
+    "WebSockets & Real-Time Systems",
+    "MySQL & PostgreSQL",
+    "RESTful API Design",
+    "Git & GitHub",
+    "Responsive Web Design",
+    "UI/UX Collaboration (Figma)",
+    "Docker (Basics)",
+    "AWS Deployment (Basics)",
+    "WordPress Development",
+  ],
+  experience: [
+    {
+      title: "Freelance Web Developer",
+      organization: "Self-Employed",
+      location: "Remote",
+      period: "2022 – Present",
+      description: [
+        "Delivered websites and web applications using WordPress, React, and Django for clients across various industries.",
+      ],
+      achievements: [
+        "Completed 2-3 client contracts per year while building personal products",
+        "Translated business needs into functional digital products",
+        "Handled deployment, UI improvements, and feature enhancements",
+        "Provided ongoing maintenance and technical support",
+        "Built responsive, mobile-first websites and applications",
+        "Integrated secure authentication and payment systems",
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Yom Health Platform",
+      description: "Healthcare platform connecting patients with medical professionals for home-based care.",
+      technologies: ["React", "Django", "Firebase", "MySQL", "WebSockets", "Flutter"],
+      highlights: [
+        "Real-time GPS-based professional matching",
+        "Firebase token authentication system",
+        "Django REST API for backend logic",
+        "WebSocket implementation for live updates",
+        "Medical records management",
+        "Multi-role dashboard system",
+      ],
+      link: "https://yomhealth.com",
+    },
+    {
+      name: "Nexa / Norvi (Location-Based Social App)",
+      description: "Proximity-based social application for nearby user discovery and real-time interaction.",
+      technologies: ["React", "Next.js", "Firebase", "Geolocation APIs"],
+      highlights: [
+        "Real-time location tracking and matching",
+        "Distance calculation algorithms",
+        "Scalable frontend architecture",
+        "Phased feature releases (v1 & v1.5)",
+        "Interactive user profiles",
+        "Location permissions handling",
+      ],
+      github: "https://github.com/benardgomashie",
+    },
+    {
+      name: "Client Websites & Web Apps",
+      description: "Various freelance projects including business websites, portfolios, and custom web applications.",
+      technologies: ["WordPress", "React", "Django", "JavaScript", "Tailwind CSS"],
+      highlights: [
+        "Responsive, mobile-first designs",
+        "Custom WordPress theme development",
+        "E-commerce integrations",
+        "SEO optimization",
+        "Performance tuning",
+        "Client training and handoff",
+      ],
+    },
+  ],
+  highlights: [
+    "Built production-ready healthcare platform from scratch",
+    "Averaged 2-3 successful freelance contracts per year",
+    "Experienced in full project lifecycle from design to deployment",
+    "Strong problem-solving and debugging skills",
+    "Excellent communication and client collaboration",
+    "Self-taught and continuously learning new technologies",
+  ],
+};
