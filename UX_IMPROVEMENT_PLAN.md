@@ -24,7 +24,7 @@ Inspired by: Hemanshu Mishra's portfolio sections
 ### Implemented Features:
 - ✅ **Magazine-style hero** with gradient background
   - Large impactful headline
-  - 4 stat cards (50+ adopters, 2023 founded, MVP launched, 5+ team)
+  - 4 stat cards (50+ adopters, 2025 founded, MVP launched, 5+ team)
   - Grid pattern background overlay
 
 - ✅ **Chapter-based timeline** (Story Arc)
