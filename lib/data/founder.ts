@@ -40,6 +40,23 @@ export const founderData: PersonaData = {
         "Managed stakeholder communication with health professionals, users, and partners",
       ],
     },
+    {
+      title: "Freelance Developer & Digital Consultant",
+      organization: "Self-Employed",
+      location: "Remote / Ghana",
+      period: "2022 – Present",
+      description: [
+        "Provided web development and digital consulting services to notable organisations across international development, agribusiness, transport, and the private sector.",
+      ],
+      achievements: [
+        "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit) — international development digital solutions",
+        "Africa Women in Agribusiness (AWIA) — web tools supporting women entrepreneurs across Africa",
+        "Guzakuza — e-commerce and business growth platform for African markets",
+        "YoYo Ride — digital products for ride-hailing service",
+        "Pisca Sports (piscasports.org) — sports brand digital presence",
+        "Romsj Global Tech (romsjglobaltech.com) — corporate website and digital assets",
+      ],
+    },
   ],
   projects: [
     {
@@ -55,7 +72,7 @@ export const founderData: PersonaData = {
         "Push notifications for appointment updates",
       ],
       link: "https://yomhealth.com",
-      playStore: "available",
+      playStore: "https://play.google.com/store/apps/details?id=com.banditor.YomMobile",
     },
     {
       name: "Norvi",
@@ -85,7 +102,7 @@ export const founderData: PersonaData = {
         "Developed roadmap for church-scale collaboration features",
         "Led full product lifecycle: concept → UX → architecture → deployment",
       ],
-      link: "https://prayerbomb.web.app",
+      link: "https://prayerbombwebsite.vercel.app/",
       apk: "available",
     },
     {
@@ -101,6 +118,7 @@ export const founderData: PersonaData = {
         "Positioned product for early-stage investor discussions",
         "Built scalable architecture for future fintech expansion",
       ],
+      link: "http://wamo-26a85.web.app/",
       apk: "available",
     },
     {
@@ -120,6 +138,7 @@ export const founderData: PersonaData = {
     },
   ],
   highlights: [
+    "MSc Information Technology, BlueCrest University College",
     "Built a healthcare platform from concept to production",
     "Led cross-functional team across tech, design, and operations",
     "Launched multiple products addressing African market challenges",
@@ -127,8 +146,34 @@ export const founderData: PersonaData = {
     "Designed culturally adaptive social platform (Norvi)",
     "Built crowdfunding infrastructure for emerging markets (Wamo)",
     "Transformed traditional systems into digital products (Prayer Bomb)",
+    "Delivered work for GIZ, AWIA, Guzakuza, YoYo Ride, Pisca Sports & Romsj Global Tech",
     "Navigated healthcare regulations and legal compliance",
-    "Developed go-to-market strategies and launch plans",
     "Created scalable system architectures for growth",
+  ],
+  education: [
+    {
+      degree: "Master of Science (MSc) in Information Technology",
+      institution: "BlueCrest University College, Accra, Ghana",
+      period: "2023 – 2025",
+      focus: [
+        "Information Systems in Organizations",
+        "Object-Oriented Analysis and Design",
+        "Data Networks",
+        "Research Methodology",
+      ],
+      achievements: [
+        "Thesis: Secure Edge Computing Using Blockchain (Ethereum smart contracts + IPFS)",
+        "Applied research directly to product architecture decisions",
+      ],
+    },
+    {
+      degree: "Bachelor of Science (BSc) in Agricultural Extension",
+      institution: "University of Ghana, Legon",
+      period: "2017 – 2021",
+      focus: [
+        "Rural development and community engagement",
+        "Technology adoption in agriculture",
+      ],
+    },
   ],
 };

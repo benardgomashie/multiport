@@ -113,7 +113,7 @@ export const researcherData: PersonaData = {
         "Studied user behavior patterns in faith-based applications",
         "Explored offline-first data persistence strategies",
       ],
-      link: "https://prayerbomb.web.app",
+      link: "https://prayerbombwebsite.vercel.app/",
     },
   ],
   highlights: [
