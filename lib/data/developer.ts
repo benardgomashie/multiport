@@ -108,8 +108,8 @@ export const developerData: PersonaData = {
     },
     {
       name: "Client Websites & Web Apps",
-      description: "Various freelance projects including business websites, portfolios, and custom web applications.",
-      technologies: ["WordPress", "React", "Django", "JavaScript", "Tailwind CSS"],
+      description: "Various freelance projects including business websites, portfolios, apps and custom web applications.",
+      technologies: ["WordPress", "React", "Django", "JavaScript", "Tailwind CSS", "Flutter"],
       highlights: [
         "Responsive, mobile-first designs",
         "Custom WordPress theme development",
