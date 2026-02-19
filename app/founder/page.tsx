@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { founderData } from "@/lib/data/founder";
-import { ArrowRight, Target, Users, Rocket, Heart, Building2, Award, TrendingUp } from "lucide-react";
+import { ArrowRight, Target, Users, Rocket, Heart, Building2, Award, TrendingUp, ExternalLink, Download } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -144,8 +144,31 @@ export default function FounderPage() {
             <div key={index} className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="p-12 flex flex-col justify-center">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">{project.name}</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-8">{project.description}</p>
+                  <div className="flex items-start justify-between mb-6">
+                    <h3 className="text-3xl font-bold text-gray-900">{project.name}</h3>
+                    <div className="flex items-center gap-2 flex-shrink-0 ml-4">
+                      {project.playStore && (
+                        <span className="flex items-center gap-1 px-2 py-1.5 bg-green-50 border border-green-200 rounded-full text-xs font-medium text-green-700">
+                          <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15L14.84 12 4.24.09a1.55 1.55 0 0 0-1.06.15C2.6.61 2.25 1.22 2.25 2v19.5c0 .79.35 1.4.93 1.26zM16.54 13.7l-2.7 2.7L5.17 23.8 19.8 15.7c.6-.34.95-.84.95-1.4 0-.12-.02-.24-.05-.35l-4.16-2.4 4.16-2.4c.03-.11.05-.23.05-.35 0-.56-.35-1.06-.95-1.4L5.17.2l8.67 7.4 2.7 2.7c.26.26.4.6.4.95s-.14.7-.4.95z"/></svg>
+                          Play Store
+                        </span>
+                      )}
+                      {project.apk && (
+                        <span className="flex items-center gap-1 px-2 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-700">
+                          <Download className="w-3 h-3" />
+                          APK
+                        </span>
+                      )}
+                      {project.link && (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer"
+                          className="flex items-center gap-1 px-3 py-1.5 bg-founder text-white rounded-full text-xs font-medium hover:bg-founder/80 transition-colors"
+                          aria-label="View project live">
+                          <ExternalLink className="w-3 h-3" />
+                          Live
+                        </a>
+                      )}
+                    </div>
+                  </div>
                   
                   <div className="space-y-4 mb-8">
                     <h4 className="font-semibold text-gray-900">Key Features:</h4>

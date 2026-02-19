@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { developerData } from "@/lib/data/developer";
-import { Github, Terminal, Code2, Zap, Layers, Database, Server, Cpu } from "lucide-react";
+import { Github, Terminal, Code2, Zap, Layers, Database, Server, Cpu, ExternalLink, Download } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -207,7 +207,27 @@ export default function DeveloperPage() {
                     <Code2 className="w-5 h-5 text-developer" />
                     <h3 className="text-xl font-bold text-white font-mono">{project.name}</h3>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex items-center gap-2">
+                    {project.playStore && (
+                      <span className="flex items-center gap-1 px-2 py-1 bg-green-900/50 border border-green-700 rounded text-xs font-medium text-green-400">
+                        <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15L14.84 12 4.24.09a1.55 1.55 0 0 0-1.06.15C2.6.61 2.25 1.22 2.25 2v19.5c0 .79.35 1.4.93 1.26zM16.54 13.7l-2.7 2.7L5.17 23.8 19.8 15.7c.6-.34.95-.84.95-1.4 0-.12-.02-.24-.05-.35l-4.16-2.4 4.16-2.4c.03-.11.05-.23.05-.35 0-.56-.35-1.06-.95-1.4L5.17.2l8.67 7.4 2.7 2.7c.26.26.4.6.4.95s-.14.7-.4.95z"/></svg>
+                        Play Store
+                      </span>
+                    )}
+                    {project.apk && (
+                      <span className="flex items-center gap-1 px-2 py-1 bg-blue-900/50 border border-blue-700 rounded text-xs font-medium text-blue-400">
+                        <Download className="w-3 h-3" />
+                        APK
+                      </span>
+                    )}
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-2 py-1 bg-gray-600 border border-gray-500 rounded text-xs font-medium text-gray-200 hover:bg-gray-500 transition-colors"
+                        aria-label="View project">
+                        <ExternalLink className="w-3 h-3" />
+                        Live
+                      </a>
+                    )}
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
                 </div>

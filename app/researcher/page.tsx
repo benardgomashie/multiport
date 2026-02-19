@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { researcherData } from "@/lib/data/researcher";
-import { BookOpen, GraduationCap, Award, FileText, Users, Brain, Network, Lock, Globe, Zap, Database } from "lucide-react";
+import { BookOpen, GraduationCap, Award, FileText, Users, Brain, Network, Lock, Globe, Zap, Database, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -219,7 +219,17 @@ export default function ResearcherPage() {
                     {String(index + 1).padStart(2, '0')}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.name}</h3>
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="text-2xl font-bold text-gray-900">{project.name}</h3>
+                      {project.link && (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer"
+                          className="flex items-center gap-1 px-3 py-1.5 bg-researcher text-white rounded-full text-xs font-medium hover:bg-researcher/80 transition-colors flex-shrink-0 ml-4"
+                          aria-label="View project">
+                          <ExternalLink className="w-3 h-3" />
+                          Live
+                        </a>
+                      )}
+                    </div>
                     <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
                     
                     {project.technologies && (

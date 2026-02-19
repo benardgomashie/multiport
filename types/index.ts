@@ -25,6 +25,8 @@ export interface ProjectItem {
   highlights: string[];
   link?: string;
   github?: string;
+  playStore?: string;
+  apk?: string;
 }
 
 export interface EducationItem {
