@@ -125,6 +125,7 @@ export const developerData: PersonaData = {
     "Developed proximity-based social platform with real-time matching",
     "Created offline-first prayer tracking app with scalable architecture",
     "Engineered AI-powered news intelligence platform with automated data pipelines",
+    "Delivered freelance development for organizations including Guzakuza, GIZ, AWIA, YOyo Ride, and Pisca",
     "Averaged 2-3 successful freelance contracts per year",
     "Experienced in full project lifecycle from design to deployment",
     "Strong problem-solving and debugging skills",

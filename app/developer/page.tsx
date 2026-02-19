@@ -40,6 +40,14 @@ const stackCards = [
   },
 ];
 
+const notableOrganizations = [
+  "Guzakuza",
+  "GIZ",
+  "Africa Women in Agribusiness (AWIA)",
+  "YOyo Ride",
+  "Pisca",
+];
+
 export default function DeveloperPage() {
   return (
     <div className={`${sans.className} min-h-screen bg-[#070b14] text-slate-100`}>
@@ -110,6 +118,27 @@ export default function DeveloperPage() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-slate-800 bg-slate-900/60 px-4 py-14">
+        <div className="mx-auto max-w-6xl">
+          <h2 className={`${mono.className} mb-4 text-xl uppercase tracking-[0.16em] text-developer-light`}>
+            Notable Organizations
+          </h2>
+          <p className="mb-6 max-w-3xl text-slate-300">
+            Selected organizations I have supported as a freelance developer.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {notableOrganizations.map((org) => (
+              <span
+                key={org}
+                className="rounded-full border border-developer/40 bg-developer/10 px-4 py-2 text-sm font-semibold text-developer-light"
+              >
+                {org}
+              </span>
+            ))}
           </div>
         </div>
       </section>
