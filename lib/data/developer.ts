@@ -4,7 +4,7 @@ export const developerData: PersonaData = {
   title: "Full-Stack Developer & Digital Craftsman",
   subtitle: "Building scalable web applications with React, Django & Next.js",
   about: [
-    "I'm a full-stack developer who loves building things that work—and work well. Whether it's a complex healthcare platform, a location-based social app, or a client's business website, I approach every project with the same commitment to clean code, scalable architecture, and excellent user experience.",
+    "I'm a full-stack developer who loves building things that work - and work well. Whether it's a complex healthcare platform, a location-based social app, or a client's business website, I approach every project with the same commitment to clean code, scalable architecture, and excellent user experience.",
     "My technical journey spans frontend frameworks like React and Next.js, backend systems with Django and Python, and real-time features using WebSockets and Firebase. I've built authentication systems, RESTful APIs, GPS-based matching algorithms, and everything in between.",
     "I hold an MSc in Information Technology from BlueCrest University College, where my thesis explored blockchain-based security for edge computing. Beyond my own products, I've delivered freelance work for notable organisations including GIZ, Africa Women in Agribusiness (AWIA), Guzakuza, YoYo Ride, Pisca Sports, and Romsj Global Tech.",
   ],
@@ -42,7 +42,7 @@ export const developerData: PersonaData = {
         "Developed web presence and tools for Africa Women in Agribusiness (AWIA), supporting women entrepreneurs across Africa",
         "Delivered platform work for Guzakuza, an African e-commerce and business growth platform",
         "Built and maintained digital products for YoYo Ride, a ride-hailing service",
-        "Delivered web solutions for Pisca Sports (piscasports.org) — sports brand digital presence",
+        "Delivered web solutions for Pisca Sports (piscasports.org)  -  sports brand digital presence",
         "Built website and digital assets for Romsj Global Tech (romsjglobaltech.com)",
         "Translated business needs into functional digital products across diverse sectors",
         "Built responsive, mobile-first websites and applications",
@@ -129,12 +129,12 @@ export const developerData: PersonaData = {
       description: "Web development and digital consulting delivered to notable organisations across international development, agribusiness, transport, and the private sector.",
       technologies: ["WordPress", "React", "Django", "JavaScript", "Tailwind CSS", "Flutter"],
       highlights: [
-        "GIZ — digital solutions for international development programmes",
-        "Africa Women in Agribusiness (AWIA) — web tools supporting women entrepreneurs across Africa",
-        "Guzakuza — e-commerce and business growth platform for African markets",
-        "YoYo Ride — digital products for ride-hailing service",
-        "Pisca Sports (piscasports.org) — sports brand digital presence",
-        "Romsj Global Tech (romsjglobaltech.com) — corporate website and digital assets",
+        "GIZ  -  digital solutions for international development programmes",
+        "Africa Women in Agribusiness (AWIA)  -  web tools supporting women entrepreneurs across Africa",
+        "Guzakuza  -  e-commerce and business growth platform for African markets",
+        "YoYo Ride  -  digital products for ride-hailing service",
+        "Pisca Sports (piscasports.org)  -  sports brand digital presence",
+        "Romsj Global Tech (romsjglobaltech.com)  -  corporate website and digital assets",
         "Responsive, mobile-first designs with SEO optimisation",
         "Custom integrations, authentication, and client handoff",
       ],
@@ -153,3 +153,4 @@ export const developerData: PersonaData = {
     "Self-taught and continuously learning new technologies",
   ],
 };
+

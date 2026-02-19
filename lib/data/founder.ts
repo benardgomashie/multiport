@@ -4,7 +4,7 @@ export const founderData: PersonaData = {
   title: "Building Healthcare Solutions for Africa",
   subtitle: "Founder & CEO of Yom Health",
   about: [
-    "I founded Yom Health with a clear mission: to improve access to quality healthcare services across Ghana and beyond. As a founder, I've learned that building a health-tech platform isn't just about writing code—it's about understanding real-world problems, coordinating diverse teams, and creating solutions that truly make a difference.",
+    "I founded Yom Health with a clear mission: to improve access to quality healthcare services across Ghana and beyond. As a founder, I've learned that building a health-tech platform isn't just about writing code - it's about understanding real-world problems, coordinating diverse teams, and creating solutions that truly make a difference.",
     "From conceptualizing the platform to leading product strategy, managing stakeholder relationships, and navigating legal compliance, I've built Yom Health from the ground up. Our platform connects patients with verified healthcare professionals for home-based and on-demand care, using real-time GPS proximity matching and secure authentication systems.",
     "Beyond the technology, I'm passionate about creating impact. Every feature we build, every decision we make, is guided by one question: How does this improve healthcare access for people who need it most?",
   ],
@@ -49,12 +49,12 @@ export const founderData: PersonaData = {
         "Provided web development and digital consulting services to notable organisations across international development, agribusiness, transport, and the private sector.",
       ],
       achievements: [
-        "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit) — international development digital solutions",
-        "Africa Women in Agribusiness (AWIA) — web tools supporting women entrepreneurs across Africa",
-        "Guzakuza — e-commerce and business growth platform for African markets",
-        "YoYo Ride — digital products for ride-hailing service",
-        "Pisca Sports (piscasports.org) — sports brand digital presence",
-        "Romsj Global Tech (romsjglobaltech.com) — corporate website and digital assets",
+        "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)  -  international development digital solutions",
+        "Africa Women in Agribusiness (AWIA)  -  web tools supporting women entrepreneurs across Africa",
+        "Guzakuza  -  e-commerce and business growth platform for African markets",
+        "YoYo Ride  -  digital products for ride-hailing service",
+        "Pisca Sports (piscasports.org)  -  sports brand digital presence",
+        "Romsj Global Tech (romsjglobaltech.com)  -  corporate website and digital assets",
       ],
     },
   ],
@@ -123,7 +123,7 @@ export const founderData: PersonaData = {
     },
     {
       name: "Ghana Intel Brief",
-      description: "AI-powered news intelligence platform aggregating and summarizing Ghanaian business and policy news — positioned at the intersection of AI infrastructure and African media.",
+      description: "AI-powered news intelligence platform aggregating and summarizing Ghanaian business and policy news  -  positioned at the intersection of AI infrastructure and African media.",
       technologies: ["Next.js", "Genkit", "Gemini API", "Vercel", "Serverless Architecture"],
       highlights: [
         "Founded and built an automated news intelligence platform for the Ghanaian market",
@@ -177,3 +177,4 @@ export const founderData: PersonaData = {
     },
   ],
 };
+
