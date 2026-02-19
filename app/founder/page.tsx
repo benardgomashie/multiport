@@ -1,292 +1,175 @@
 import type { Metadata } from "next";
-import { founderData } from "@/lib/data/founder";
-import { ArrowRight, Target, Users, Rocket, Heart, Building2, Award, TrendingUp, ExternalLink, Download } from "lucide-react";
 import Link from "next/link";
+import { founderData } from "@/lib/data/founder";
+import {
+  ArrowRight,
+  Building2,
+  CheckCircle2,
+  HeartPulse,
+  LineChart,
+  ShieldCheck,
+  Sparkles,
+  Users,
+} from "lucide-react";
+import { DM_Serif_Display, Manrope } from "next/font/google";
+
+const headingFont = DM_Serif_Display({ subsets: ["latin"], weight: "400" });
+const bodyFont = Manrope({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "Founder & Product Leader | Benard Gomashie",
-  description: "Building Yom Health to improve access to home-based healthcare services in Ghana. Leading product strategy and team coordination.",
+  description:
+    "Building Yom Health to improve access to home-based healthcare services in Ghana. Leading product strategy and team coordination.",
 };
+
+const impactStats = [
+  { label: "Products Launched", value: "5+" },
+  { label: "Primary Focus", value: "HealthTech" },
+  { label: "Current Stage", value: "MVP + Growth" },
+  { label: "Base", value: "Accra" },
+];
 
 export default function FounderPage() {
   return (
-    <div className="bg-white">
-      {/* Magazine-Style Hero with Stats */}
-      <section className="relative min-h-[70vh] bg-gradient-to-br from-founder via-emerald-500 to-green-600 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
-                🚀 Founder & CEO
-              </span>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Building the Future of Healthcare
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-                Democratizing access to quality home-based healthcare services across Ghana
-              </p>
-              <div className="flex items-center gap-6 text-sm">
-                <div className="flex items-center gap-2">
-                  <Building2 className="w-5 h-5" />
-                  <span>Yom Health</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-white rounded-full"></span>
-                  <span>2023 - Present</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Impact Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                <div className="text-4xl font-bold mb-2">50+</div>
-                <div className="text-white/80">Early Adopters</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                <div className="text-4xl font-bold mb-2">2023</div>
-                <div className="text-white/80">Founded</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                <div className="text-4xl font-bold mb-2">MVP</div>
-                <div className="text-white/80">Launched</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                <div className="text-4xl font-bold mb-2">5+</div>
-                <div className="text-white/80">Team Members</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className={`${bodyFont.className} bg-[#f7f5ef] text-[#1f2a24]`}>
+      <section className="relative overflow-hidden border-b border-[#d6d2c8] bg-gradient-to-br from-[#f7f5ef] via-[#f0ece2] to-[#e6f6ed] px-4 py-20 md:py-28">
+        <div className="absolute -right-20 top-6 h-64 w-64 rounded-full bg-founder/20 blur-3xl" />
+        <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-emerald-200/50 blur-3xl" />
 
-      {/* Story Timeline */}
-      <section className="max-w-5xl mx-auto px-4 py-24">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 bg-founder/10 text-founder rounded-full text-sm font-semibold mb-4">
-            MY JOURNEY
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            From Vision to Reality
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            The story of how a personal mission became a healthcare revolution
+        <div className="relative mx-auto max-w-6xl">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-founder/30 bg-founder/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-founder">
+            <Sparkles className="h-3.5 w-3.5" />
+            Founder Profile
           </p>
-        </div>
 
-        <div className="space-y-16">
-          {/* Chapter 1 */}
-          <div className="relative pl-8 border-l-4 border-founder">
-            <div className="absolute -left-3 top-0 w-6 h-6 bg-founder rounded-full border-4 border-white shadow-lg"></div>
-            <span className="text-sm font-semibold text-founder mb-2 block">CHAPTER 1 • THE SPARK</span>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Recognizing the Problem</h3>
-            <div className="bg-gray-50 rounded-xl p-8">
-              <p className="text-lg text-gray-700 leading-relaxed">
+          <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+            <div>
+              <h1 className={`${headingFont.className} text-5xl leading-[0.95] text-[#15241d] md:text-7xl`}>
+                Building healthcare products people can trust.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#2f3d36]">
                 {founderData.about[0]}
               </p>
             </div>
-          </div>
 
-          {/* Chapter 2 */}
-          <div className="relative pl-8 border-l-4 border-founder">
-            <div className="absolute -left-3 top-0 w-6 h-6 bg-founder rounded-full border-4 border-white shadow-lg"></div>
-            <span className="text-sm font-semibold text-founder mb-2 block">CHAPTER 2 • THE MISSION</span>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Founding Yom Health</h3>
-            <div className="bg-gradient-to-br from-founder/5 to-emerald-50 rounded-xl p-8 border border-founder/10">
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                {founderData.about[1]}
-              </p>
-              <div className="grid md:grid-cols-3 gap-4 text-sm">
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Heart className="w-4 h-4 text-founder" />
-                  <span>Patient-First Approach</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Rocket className="w-4 h-4 text-founder" />
-                  <span>Rapid MVP Development</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Users className="w-4 h-4 text-founder" />
-                  <span>Cross-functional Team</span>
-                </div>
+            <div className="rounded-2xl border border-founder/20 bg-white/75 p-6 shadow-lg shadow-founder/10 backdrop-blur">
+              <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-founder">
+                Strategic Lens
+              </h2>
+              <div className="space-y-4 text-sm text-[#2a372f]">
+                <p className="flex items-start gap-2">
+                  <HeartPulse className="mt-0.5 h-4 w-4 text-founder" />
+                  Patient-first healthcare experience design.
+                </p>
+                <p className="flex items-start gap-2">
+                  <LineChart className="mt-0.5 h-4 w-4 text-founder" />
+                  Practical growth loops from research to rollout.
+                </p>
+                <p className="flex items-start gap-2">
+                  <Users className="mt-0.5 h-4 w-4 text-founder" />
+                  Cross-functional execution across product and engineering.
+                </p>
               </div>
-            </div>
-          </div>
-
-          {/* Chapter 3 */}
-          <div className="relative pl-8 border-l-4 border-founder">
-            <div className="absolute -left-3 top-0 w-6 h-6 bg-founder rounded-full border-4 border-white shadow-lg"></div>
-            <span className="text-sm font-semibold text-founder mb-2 block">CHAPTER 3 • THE EXECUTION</span>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Building & Launching</h3>
-            <div className="bg-gray-50 rounded-xl p-8">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {founderData.about[2] || "From concept to MVP, leading product strategy and technical execution to deliver transformative healthcare solutions."}
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Big Visual Project Showcase */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-24">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 bg-founder/10 text-founder rounded-full text-sm font-semibold mb-4">
-              FLAGSHIP PROJECT
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Yom Health Platform
-            </h2>
-          </div>
-
-          {founderData.projects && founderData.projects.length > 0 && founderData.projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
-              <div className="grid lg:grid-cols-2 gap-0">
-                <div className="p-12 flex flex-col justify-center">
-                  <div className="flex items-start justify-between mb-6">
-                    <h3 className="text-3xl font-bold text-gray-900">{project.name}</h3>
-                    <div className="flex items-center gap-2 flex-shrink-0 ml-4">
-                      {project.playStore && (
-                        <span className="flex items-center gap-1 px-2 py-1.5 bg-green-50 border border-green-200 rounded-full text-xs font-medium text-green-700">
-                          <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15L14.84 12 4.24.09a1.55 1.55 0 0 0-1.06.15C2.6.61 2.25 1.22 2.25 2v19.5c0 .79.35 1.4.93 1.26zM16.54 13.7l-2.7 2.7L5.17 23.8 19.8 15.7c.6-.34.95-.84.95-1.4 0-.12-.02-.24-.05-.35l-4.16-2.4 4.16-2.4c.03-.11.05-.23.05-.35 0-.56-.35-1.06-.95-1.4L5.17.2l8.67 7.4 2.7 2.7c.26.26.4.6.4.95s-.14.7-.4.95z"/></svg>
-                          Play Store
-                        </span>
-                      )}
-                      {project.apk && (
-                        <span className="flex items-center gap-1 px-2 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-700">
-                          <Download className="w-3 h-3" />
-                          APK
-                        </span>
-                      )}
-                      {project.link && (
-                        <a href={project.link} target="_blank" rel="noopener noreferrer"
-                          className="flex items-center gap-1 px-3 py-1.5 bg-founder text-white rounded-full text-xs font-medium hover:bg-founder/80 transition-colors"
-                          aria-label="View project live">
-                          <ExternalLink className="w-3 h-3" />
-                          Live
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4 mb-8">
-                    <h4 className="font-semibold text-gray-900">Key Features:</h4>
-                    <ul className="space-y-3">
-                      {project.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex} className="flex items-start gap-3">
-                          <span className="w-1.5 h-1.5 bg-founder rounded-full mt-2 flex-shrink-0"></span>
-                          <span className="text-gray-700">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, tIndex) => (
-                      <span key={tIndex} className="px-4 py-1.5 bg-founder/10 text-founder rounded-full text-sm font-medium">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-founder/20 to-emerald-100 p-12 flex items-center justify-center">
-                  <div className="text-center">
-                    <Building2 className="w-32 h-32 text-founder/40 mx-auto mb-6" />
-                    <p className="text-gray-700 font-medium">Healthcare Platform Architecture</p>
-                  </div>
-                </div>
-              </div>
+      <section className="border-b border-[#d6d2c8] bg-[#f2efe6] px-4 py-8">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 md:grid-cols-4">
+          {impactStats.map((stat) => (
+            <div key={stat.label} className="rounded-xl border border-[#d8d2c4] bg-white/70 p-4 text-center">
+              <p className="text-2xl font-extrabold text-founder">{stat.value}</p>
+              <p className="text-xs uppercase tracking-wide text-[#55625c]">{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Impact Grid */}
-      <section className="max-w-7xl mx-auto px-4 py-24">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 bg-founder/10 text-founder rounded-full text-sm font-semibold mb-4">
-            MAKING AN IMPACT
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Measurable Results
+      <section className="px-4 py-20">
+        <div className="mx-auto max-w-6xl">
+          <h2 className={`${headingFont.className} mb-10 text-4xl text-[#15241d] md:text-5xl`}>
+            Founder Story
           </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <div className="w-12 h-12 bg-founder/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-founder group-hover:scale-110 transition-all">
-              <Rocket className="w-6 h-6 text-founder group-hover:text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Platform Launch</h3>
-            <p className="text-gray-600">MVP successfully deployed, connecting patients with providers across Accra</p>
-          </div>
-
-          <div className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <div className="w-12 h-12 bg-founder/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-founder group-hover:scale-110 transition-all">
-              <Users className="w-6 h-6 text-founder group-hover:text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">User Research</h3>
-            <p className="text-gray-600">Insights from 50+ early adopters shaping product roadmap</p>
-          </div>
-
-          <div className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <div className="w-12 h-12 bg-founder/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-founder group-hover:scale-110 transition-all">
-              <Target className="w-6 h-6 text-founder group-hover:text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Team Building</h3>
-            <p className="text-gray-600">Cross-functional team of developers and healthcare experts</p>
-          </div>
-
-          <div className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <div className="w-12 h-12 bg-founder/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-founder group-hover:scale-110 transition-all">
-              <TrendingUp className="w-6 h-6 text-founder group-hover:text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Growth Vision</h3>
-            <p className="text-gray-600">Strategic roadmap for scaling across Ghana and beyond</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills - Badge Style */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-24">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 bg-founder/10 text-founder rounded-full text-sm font-semibold mb-4">
-              EXPERTISE
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Leadership Toolkit
-            </h2>
-          </div>
-
-          <div className="flex flex-wrap gap-3 justify-center">
-            {founderData.skills.map((skill, index) => (
-              <span key={index} className="px-5 py-2.5 bg-white border-2 border-founder/20 text-gray-800 rounded-full font-medium hover:bg-founder hover:text-white hover:border-founder transition-all cursor-default">
-                {skill}
-              </span>
+          <div className="grid gap-6 md:grid-cols-3">
+            {founderData.about.map((paragraph, index) => (
+              <article key={index} className="rounded-2xl border border-[#ddd8ca] bg-white p-6 shadow-sm">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-founder">
+                  Chapter {String(index + 1).padStart(2, "0")}
+                </p>
+                <p className="leading-relaxed text-[#2f3d36]">{paragraph}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-br from-founder via-emerald-600 to-green-700 text-white py-24">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <Heart className="w-16 h-16 mx-auto mb-6 opacity-90" />
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's Transform Healthcare Together
+      <section className="bg-[#eef5ef] px-4 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 flex items-center justify-between gap-4">
+            <h2 className={`${headingFont.className} text-4xl text-[#15241d] md:text-5xl`}>
+              Portfolio of Initiatives
+            </h2>
+            <Building2 className="h-8 w-8 text-founder" />
+          </div>
+
+          <div className="space-y-6">
+            {founderData.projects?.map((project, index) => (
+              <article key={index} className="rounded-2xl border border-founder/20 bg-white p-6 shadow-sm">
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="text-2xl font-bold text-[#15241d]">{project.name}</h3>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-founder px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-founder-dark"
+                    >
+                      Visit Project
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  ) : null}
+                </div>
+
+                <p className="mb-4 text-[#314038]">{project.description}</p>
+
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="rounded-full border border-founder/20 bg-founder/10 px-3 py-1 text-xs font-semibold text-founder">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <ul className="grid gap-2 md:grid-cols-2">
+                  {project.highlights.slice(0, 6).map((highlight) => (
+                    <li key={highlight} className="flex items-start gap-2 text-sm text-[#2f3d36]">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-founder" />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-20">
+        <div className="mx-auto max-w-5xl rounded-3xl border border-founder/20 bg-white p-8 text-center shadow-lg">
+          <ShieldCheck className="mx-auto mb-4 h-10 w-10 text-founder" />
+          <h2 className={`${headingFont.className} text-4xl text-[#15241d] md:text-5xl`}>
+            Open to Strategic Partnerships
           </h2>
-          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Interested in healthcare innovation, partnerships, or joining our mission? 
-            Let's connect and explore how we can make a difference.
+          <p className="mx-auto mt-4 max-w-2xl text-[#33413a]">
+            If you are building in healthcare, digital infrastructure, or mission-driven African markets, I am open to collaboration.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-founder px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-xl"
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-founder px-7 py-3.5 font-semibold text-white transition hover:bg-founder-dark"
           >
-            Get In Touch →
+            Contact Me
+            <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
