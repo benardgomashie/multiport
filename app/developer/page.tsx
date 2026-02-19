@@ -69,6 +69,15 @@ export default function DeveloperPage() {
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
                 {developerData.about[0]}
               </p>
+              <div className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-xl border border-developer/40 bg-developer/10 px-4 py-2 text-sm text-developer-light">
+                <span className={`${mono.className} text-xs uppercase tracking-[0.16em] text-blue-300`}>
+                  Featured Build
+                </span>
+                <span>Secure Edge Blockchain System (MSc Implementation)</span>
+                <Link href="/researcher" className="underline underline-offset-4 hover:text-blue-300">
+                  View details
+                </Link>
+              </div>
 
               <div className={`${mono.className} mt-8 rounded-2xl border border-slate-700 bg-[#0f172a] p-5 text-sm text-slate-300`}>
                 <p className="text-emerald-400">$ cat availability.txt</p>
