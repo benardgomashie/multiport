@@ -67,21 +67,6 @@ export const developerData: PersonaData = {
       playStore: "https://play.google.com/store/apps/details?id=com.banditor.YomMobile",
     },
     {
-      name: "Secure Edge Computing Using Blockchain",
-      description: "MSc thesis: a layered decentralized security framework integrating Ethereum smart contracts and IPFS for tamper-proof data logging, automated access control, and decentralized identity verification in edge computing environments.",
-      technologies: ["Solidity", "Ethereum", "IPFS", "React", "Django REST", "PostgreSQL", "Redis", "Celery", "Web3.js", "MetaMask", "Ganache", "Python"],
-      highlights: [
-        "Designed four-layer architecture: Edge → Blockchain → Storage → Application",
-        "Wrote Solidity smart contracts for device registration, RBAC, nonce-based anti-replay protection, and tamper-proof audit logging",
-        "Implemented AES-256 encryption and SHA-256/Keccak-256 hashing at the edge layer",
-        "Integrated IPFS for off-chain encrypted storage with on-chain hash anchoring",
-        "Built React DApp frontend with MetaMask authentication",
-        "Developed Django REST backend with PostgreSQL, Redis, and Celery for async processing",
-        "Achieved 99.8% integrity verification and 99.5% uptime in testing across 50 concurrent users",
-        "Benchmarked against centralized systems: 100% immutable logging, automated policy enforcement, reduced operational cost",
-      ],
-    },
-    {
       name: "Norvi",
       description: "Location-based human connection platform enabling proximity-based networking with intent-driven matching and culturally adaptive features.",
       technologies: ["Flutter", "Django REST Framework", "PostgreSQL", "WebSockets"],
@@ -147,7 +132,7 @@ export const developerData: PersonaData = {
   highlights: [
     "MSc Information Technology (BlueCrest University College)",
     "Built production-ready healthcare platform from scratch",
-    "Implemented Ethereum smart contract security framework for edge computing (MSc thesis)",
+    "Completed MSc thesis on blockchain-based edge security (see Research profile for full details)",
     "Developed proximity-based social platform with real-time matching",
     "Created offline-first prayer tracking app with scalable architecture",
     "Engineered AI-powered news intelligence platform with automated data pipelines",

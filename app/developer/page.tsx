@@ -197,7 +197,14 @@ export default function DeveloperPage() {
               Featured Projects
             </h2>
           </div>
-          <p className="text-gray-400 text-lg mb-12">Building scalable solutions, one commit at a time.</p>
+          <p className="text-gray-400 text-lg mb-4">Building scalable solutions, one commit at a time.</p>
+          <p className="text-gray-400 text-sm mb-12">
+            Thesis deep-dive on secure edge computing is covered on the{" "}
+            <Link href="/researcher" className="text-developer hover:text-blue-400 underline underline-offset-4">
+              Research profile
+            </Link>
+            .
+          </p>
 
           <div className="space-y-8">
             {developerData.projects && developerData.projects.map((project, index) => (
