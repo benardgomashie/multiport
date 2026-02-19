@@ -67,6 +67,17 @@ export const developerData: PersonaData = {
       playStore: "https://play.google.com/store/apps/details?id=com.banditor.YomMobile",
     },
     {
+      name: "Secure Edge Blockchain System",
+      description: "MSc implementation of a decentralized edge security architecture using Ethereum smart contracts and IPFS for tamper-proof data integrity and access control.",
+      technologies: ["Solidity", "Ethereum", "IPFS", "Web3.js", "React", "Django REST", "PostgreSQL", "Redis", "Celery"],
+      highlights: [
+        "Designed a four-layer architecture: Edge, Blockchain, Storage, and Application",
+        "Implemented device registration, RBAC, and nonce-based anti-replay protections in smart contracts",
+        "Anchored encrypted off-chain data in IPFS with on-chain hash verification",
+        "Built monitoring and audit visibility through immutable blockchain event logs",
+      ],
+    },
+    {
       name: "Norvi",
       description: "Location-based human connection platform enabling proximity-based networking with intent-driven matching and culturally adaptive features.",
       technologies: ["Flutter", "Django REST Framework", "PostgreSQL", "WebSockets"],
